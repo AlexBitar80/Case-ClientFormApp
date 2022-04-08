@@ -16,6 +16,7 @@
 		050EE25F28007A0D00866BB0 /* ZipCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE25E28007A0D00866BB0 /* ZipCodeTextField.swift */; };
 		050EE26128007A2700866BB0 /* AddressTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26028007A2700866BB0 /* AddressTextField.swift */; };
 		050EE26428007AC900866BB0 /* ClientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26328007AC900866BB0 /* ClientInfoViewController.swift */; };
+		050EE26B2800BE7700866BB0 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26A2800BE7700866BB0 /* ClientModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		050EE25E28007A0D00866BB0 /* ZipCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeTextField.swift; sourceTree = "<group>"; };
 		050EE26028007A2700866BB0 /* AddressTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTextField.swift; sourceTree = "<group>"; };
 		050EE26328007AC900866BB0 /* ClientInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoViewController.swift; sourceTree = "<group>"; };
+		050EE26A2800BE7700866BB0 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		050EE247280076EF00866BB0 /* ClientFormApp */ = {
 			isa = PBXGroup;
 			children = (
+				050EE2692800BE5600866BB0 /* Model */,
 				050EE2662800813700866BB0 /* Components */,
 				050EE268280081BC00866BB0 /* Application */,
 				050EE2652800803E00866BB0 /* Controllers */,
@@ -106,6 +109,14 @@
 				050EE253280076F000866BB0 /* LaunchScreen.storyboard */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		050EE2692800BE5600866BB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				050EE26A2800BE7700866BB0 /* ClientModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 				050EE24D280076EF00866BB0 /* ViewController.swift in Sources */,
 				050EE249280076EF00866BB0 /* AppDelegate.swift in Sources */,
 				050EE25F28007A0D00866BB0 /* ZipCodeTextField.swift in Sources */,
+				050EE26B2800BE7700866BB0 /* ClientModel.swift in Sources */,
 				050EE25D280079F800866BB0 /* PhoneTextField.swift in Sources */,
 				050EE26128007A2700866BB0 /* AddressTextField.swift in Sources */,
 				050EE24B280076EF00866BB0 /* SceneDelegate.swift in Sources */,
