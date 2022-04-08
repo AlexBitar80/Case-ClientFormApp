@@ -12,6 +12,10 @@
 		050EE24D280076EF00866BB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE24C280076EF00866BB0 /* ViewController.swift */; };
 		050EE252280076F000866BB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 050EE251280076F000866BB0 /* Assets.xcassets */; };
 		050EE255280076F000866BB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 050EE253280076F000866BB0 /* LaunchScreen.storyboard */; };
+		050EE25D280079F800866BB0 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE25C280079F800866BB0 /* PhoneTextField.swift */; };
+		050EE25F28007A0D00866BB0 /* ZipCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE25E28007A0D00866BB0 /* ZipCodeTextField.swift */; };
+		050EE26128007A2700866BB0 /* AddressTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26028007A2700866BB0 /* AddressTextField.swift */; };
+		050EE26428007AC900866BB0 /* ClientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26328007AC900866BB0 /* ClientInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		050EE251280076F000866BB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		050EE254280076F000866BB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		050EE256280076F000866BB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		050EE25C280079F800866BB0 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
+		050EE25E28007A0D00866BB0 /* ZipCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeTextField.swift; sourceTree = "<group>"; };
+		050EE26028007A2700866BB0 /* AddressTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTextField.swift; sourceTree = "<group>"; };
+		050EE26328007AC900866BB0 /* ClientInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				050EE248280076EF00866BB0 /* AppDelegate.swift */,
+				050EE26328007AC900866BB0 /* ClientInfoViewController.swift */,
 				050EE24A280076EF00866BB0 /* SceneDelegate.swift */,
 				050EE24C280076EF00866BB0 /* ViewController.swift */,
+				050EE25E28007A0D00866BB0 /* ZipCodeTextField.swift */,
+				050EE26028007A2700866BB0 /* AddressTextField.swift */,
+				050EE25C280079F800866BB0 /* PhoneTextField.swift */,
 				050EE251280076F000866BB0 /* Assets.xcassets */,
 				050EE253280076F000866BB0 /* LaunchScreen.storyboard */,
 				050EE256280076F000866BB0 /* Info.plist */,
@@ -134,8 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				050EE26428007AC900866BB0 /* ClientInfoViewController.swift in Sources */,
 				050EE24D280076EF00866BB0 /* ViewController.swift in Sources */,
 				050EE249280076EF00866BB0 /* AppDelegate.swift in Sources */,
+				050EE25F28007A0D00866BB0 /* ZipCodeTextField.swift in Sources */,
+				050EE25D280079F800866BB0 /* PhoneTextField.swift in Sources */,
+				050EE26128007A2700866BB0 /* AddressTextField.swift in Sources */,
 				050EE24B280076EF00866BB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
