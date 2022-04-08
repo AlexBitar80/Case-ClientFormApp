@@ -50,7 +50,7 @@ class PhoneTextField: UIView {
     }
     
     func validateField() {
-        if customTextField.text?.count == 14  {
+        if customTextField.text?.count == 14 {
             isValid = true
         } else {
             isValid = false
@@ -69,7 +69,7 @@ class PhoneTextField: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            alertLabel.topAnchor.constraint(equalTo: customTextField.bottomAnchor, constant: 8),
+            alertLabel.topAnchor.constraint(equalTo: customTextField.bottomAnchor, constant: 4),
             alertLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             alertLabel.leadingAnchor.constraint(equalTo: customTextField.leadingAnchor),
             alertLabel.bottomAnchor.constraint(equalTo: bottomAnchor)

@@ -9,11 +9,16 @@ import UIKit
 
 class AddressTextField: UIView {
     var placeholder: String?
+    var isValid: Bool = false {
+        didSet {
+            alertLabel.isHidden = isValid
+        }
+    }
     
     private lazy var customTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
-        textField.addTarget(self, action: #selector(didStartEditingTextField), for: .editingDidBegin)
+        textField.addTarget(self, action: #selector(didChangeText), for: .editingDidBegin)
         textField.placeholder = placeholder
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -38,8 +43,16 @@ class AddressTextField: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func didStartEditingTextField() {
-        print("Clicou!")
+    @objc func didChangeText() {
+        validateField()
+    }
+    
+    func validateField() {
+        if customTextField.text?.count == 10 {
+            isValid = true
+        } else {
+            isValid = false
+        }
     }
     
     private func setup() {
@@ -54,7 +67,7 @@ class AddressTextField: UIView {
         ])
         
         NSLayoutConstraint.activate([
-            alertLabel.topAnchor.constraint(equalTo: customTextField.bottomAnchor, constant: 8),
+            alertLabel.topAnchor.constraint(equalTo: customTextField.bottomAnchor, constant: 4),
             alertLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             alertLabel.leadingAnchor.constraint(equalTo: customTextField.leadingAnchor),
             alertLabel.bottomAnchor.constraint(equalTo: bottomAnchor)
