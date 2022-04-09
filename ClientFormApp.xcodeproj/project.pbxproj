@@ -17,6 +17,8 @@
 		050EE26128007A2700866BB0 /* AddressTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26028007A2700866BB0 /* AddressTextField.swift */; };
 		050EE26428007AC900866BB0 /* ClientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26328007AC900866BB0 /* ClientInfoViewController.swift */; };
 		050EE26B2800BE7700866BB0 /* ClientModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050EE26A2800BE7700866BB0 /* ClientModel.swift */; };
+		059072802801BC1E001870F3 /* ClientListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0590727F2801BC1E001870F3 /* ClientListViewController.swift */; };
+		059072832801E304001870F3 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059072822801E304001870F3 /* UserDefaults+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		050EE26028007A2700866BB0 /* AddressTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressTextField.swift; sourceTree = "<group>"; };
 		050EE26328007AC900866BB0 /* ClientInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientInfoViewController.swift; sourceTree = "<group>"; };
 		050EE26A2800BE7700866BB0 /* ClientModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientModel.swift; sourceTree = "<group>"; };
+		0590727F2801BC1E001870F3 /* ClientListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientListViewController.swift; sourceTree = "<group>"; };
+		059072822801E304001870F3 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		050EE247280076EF00866BB0 /* ClientFormApp */ = {
 			isa = PBXGroup;
 			children = (
+				059072812801E2D4001870F3 /* Extensions */,
 				050EE2692800BE5600866BB0 /* Model */,
 				050EE2662800813700866BB0 /* Components */,
 				050EE268280081BC00866BB0 /* Application */,
@@ -79,6 +84,7 @@
 			children = (
 				050EE26328007AC900866BB0 /* ClientInfoViewController.swift */,
 				050EE24C280076EF00866BB0 /* ViewController.swift */,
+				0590727F2801BC1E001870F3 /* ClientListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +123,14 @@
 				050EE26A2800BE7700866BB0 /* ClientModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		059072812801E2D4001870F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				059072822801E304001870F3 /* UserDefaults+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +205,13 @@
 			files = (
 				050EE26428007AC900866BB0 /* ClientInfoViewController.swift in Sources */,
 				050EE24D280076EF00866BB0 /* ViewController.swift in Sources */,
+				059072802801BC1E001870F3 /* ClientListViewController.swift in Sources */,
 				050EE249280076EF00866BB0 /* AppDelegate.swift in Sources */,
 				050EE25F28007A0D00866BB0 /* ZipCodeTextField.swift in Sources */,
 				050EE26B2800BE7700866BB0 /* ClientModel.swift in Sources */,
 				050EE25D280079F800866BB0 /* PhoneTextField.swift in Sources */,
 				050EE26128007A2700866BB0 /* AddressTextField.swift in Sources */,
+				059072832801E304001870F3 /* UserDefaults+Extensions.swift in Sources */,
 				050EE24B280076EF00866BB0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

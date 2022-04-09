@@ -9,6 +9,8 @@ import UIKit
 
 final class ViewController: UIViewController {
     
+    var clientInfo: InfoModel?
+    
     private lazy var containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
@@ -83,6 +85,7 @@ final class ViewController: UIViewController {
 
     private lazy var addNewClientButton: UIButton = {
         let button = UIButton()
+        button.addTarget(self, action: #selector(addClient), for: .touchUpInside)
         button.layer.cornerRadius = 8.0
         button.setTitle("Adicionar Cliente", for: .normal)
         button.tintColor = .white
@@ -91,10 +94,21 @@ final class ViewController: UIViewController {
         return button
     }()
 
+    @objc func addClient() {
+        if zipCodeTextField.isValid && streetTextField.isValid {
+            let address = AddressModel(zipCode: zipCodeTextField.customTextField.text, number: numberTextField.text, street: streetTextField.customTextField.text, address: additionalAddressTextField.text, city: cityTextField.text, state: stateTextField.text)
+            guard let clientInfo = clientInfo else { return }
+            let clientAddress = ClientModel(info: clientInfo, address: address)
+            UserDefaults.standard.saveClient(client: clientAddress)
+            navigationController?.popToRootViewController(animated: true)
+        } else {
+            return
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Informações de endereço"
-        
         setup()
     }
     
