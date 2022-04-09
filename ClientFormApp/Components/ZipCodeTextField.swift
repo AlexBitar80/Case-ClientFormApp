@@ -15,7 +15,7 @@ class ZipCodeTextField: UIView {
         }
     }
     
-    private lazy var customTextField: UITextField = {
+    lazy var customTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
         textField.keyboardType = .default
@@ -28,6 +28,7 @@ class ZipCodeTextField: UIView {
     private lazy var alertLabel: UILabel = {
         let label = UILabel()
         label.text = "Cep inválido"
+        label.isHidden = true
         label.textColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
