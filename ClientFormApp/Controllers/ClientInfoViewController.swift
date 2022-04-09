@@ -27,6 +27,7 @@ final class ClientInfoViewController: UIViewController {
     private lazy var nameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Nome"
+        textField.keyboardType = .default
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -35,6 +36,7 @@ final class ClientInfoViewController: UIViewController {
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "E-mail"
+        textField.keyboardType = .emailAddress
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -48,9 +50,9 @@ final class ClientInfoViewController: UIViewController {
     
     private lazy var nextScreenButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .blue
         button.setTitle("Próxima tela", for: .normal)
         button.tintColor = .white
+        button.backgroundColor = UIColor(named: "lightBlue")
         button.layer.cornerRadius = 8.0
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
