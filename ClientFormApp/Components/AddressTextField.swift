@@ -18,7 +18,8 @@ class AddressTextField: UIView {
     private lazy var customTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
-        textField.addTarget(self, action: #selector(didChangeText), for: .editingDidBegin)
+        textField.keyboardType = .default
+        textField.addTarget(self, action: #selector(didChangeText), for: .editingChanged)
         textField.placeholder = placeholder
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
