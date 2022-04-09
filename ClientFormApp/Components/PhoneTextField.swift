@@ -15,7 +15,7 @@ class PhoneTextField: UIView {
         }
     }
     
-    private lazy var customTextField: UITextField = {
+    lazy var customTextField: UITextField = {
         let textField = UITextField()
         textField.keyboardType = .phonePad
         textField.backgroundColor = .systemGray5
