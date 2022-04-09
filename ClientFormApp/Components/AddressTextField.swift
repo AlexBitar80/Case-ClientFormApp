@@ -15,7 +15,7 @@ class AddressTextField: UIView {
         }
     }
     
-    private lazy var customTextField: UITextField = {
+    lazy var customTextField: UITextField = {
         let textField = UITextField()
         textField.backgroundColor = .systemGray5
         textField.keyboardType = .default
@@ -28,6 +28,7 @@ class AddressTextField: UIView {
     private lazy var alertLabel: UILabel = {
         let label = UILabel()
         label.text = "Deve receber pelo menos 10 caracteres"
+        label.isHidden = true
         label.textColor = .red
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -49,7 +50,7 @@ class AddressTextField: UIView {
     }
     
     func validateField() {
-        if customTextField.text?.count == 10 {
+        if customTextField.text?.count ?? 0 >= 10 {
             isValid = true
         } else {
             isValid = false
