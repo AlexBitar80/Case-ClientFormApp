@@ -39,6 +39,7 @@ final class ViewController: UIViewController {
     private lazy var numberTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Número"
+        textField.keyboardType = .numberPad
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -47,6 +48,7 @@ final class ViewController: UIViewController {
     private lazy var districtTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Bairro"
+        textField.keyboardType = .default
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -55,6 +57,7 @@ final class ViewController: UIViewController {
     private lazy var additionalAddressTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Complemento"
+        textField.keyboardType = .default
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
@@ -62,6 +65,7 @@ final class ViewController: UIViewController {
 
     private lazy var cityTextField: UITextField = {
         let textField = UITextField()
+        textField.keyboardType = .default
         textField.placeholder = "Cidade"
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -70,6 +74,7 @@ final class ViewController: UIViewController {
 
     private lazy var stateTextField: UITextField = {
         let textField = UITextField()
+        textField.keyboardType = .default
         textField.placeholder = "Estado"
         textField.backgroundColor = .systemGray5
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -81,7 +86,7 @@ final class ViewController: UIViewController {
         button.layer.cornerRadius = 8.0
         button.setTitle("Adicionar Cliente", for: .normal)
         button.tintColor = .white
-        button.backgroundColor = .purple
+        button.backgroundColor = UIColor(named: "lightBlue")
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -103,6 +108,8 @@ final class ViewController: UIViewController {
         contentStackView.addArrangedSubview(additionalAddressTextField)
         contentStackView.addArrangedSubview(cityTextField)
         contentStackView.addArrangedSubview(stateTextField)
+        contentStackView.setCustomSpacing(8, after: zipCodeTextField)
+        contentStackView.setCustomSpacing(8, after: streetTextField)
         containerView.addSubview(addNewClientButton)
         
         NSLayoutConstraint.activate([
@@ -113,9 +120,9 @@ final class ViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 80),
-            contentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            contentStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            contentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -32),
+            contentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 32),
         ])
         
         NSLayoutConstraint.activate([
@@ -128,10 +135,10 @@ final class ViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            addNewClientButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -16),
-            addNewClientButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 16),
+            addNewClientButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -32),
+            addNewClientButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 32),
             addNewClientButton.heightAnchor.constraint(equalToConstant: 50),
-            addNewClientButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -16),
+            addNewClientButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -32),
         ])
     }
 }
